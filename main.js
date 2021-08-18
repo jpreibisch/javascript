@@ -1,9 +1,15 @@
-let entrada = prompt ("Ingresa tu nombre");
-let salida = entrada + " " + "Bienvenido/a";
+//let entrada = prompt ("Ingresa tu nombre");
+//let salida = entrada + "Bienvenido/a";
+//alert (salida);
+
+var numeroA= parseInt ("10");
+
+
+let entrada= prompt ("Ingresa cuantos zapatos tienes");
+entrada= parseInt (entrada);
+let salida= entrada + (numeroA);
 alert (salida);
 
-var numeroA= "2";
-let numeroB= "4";
-let resultadoProducto= numeroA*numeroB;
+
 
 
