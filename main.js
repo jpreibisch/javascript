@@ -30,4 +30,23 @@ if ((partidos==15) && (nombre!="River")) {alert ("Ingresada");
     console.log ("Intenta nuevamente");
 }
 
+// Trabajo 3 parte A //
+let usuario= "usuario";
+let pass= "pass123";
+let resultado= false;
+
+do{
+    let user=prompt ("Ingrese su usuario");
+    let password= prompt ("Ingrese su contraseña");
+    resultado= ((user==usuario) && (password=pass))
+}while (!resultado)
+
+
+// Trabajo 3 parte B//
+
+for (i=1;i<=1000;i+=2) 
+   	document.write(i)
+
+
+
 
