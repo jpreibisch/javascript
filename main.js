@@ -15,9 +15,12 @@ let edad= prompt ("Indique su edad");
 let nombre=  prompt ("Indique su nombre");
 
 
-if ((edad > 65) || (nombre== "joaquin")){alert ("Bienvenido Joaquin");
+if (edad < 65) {alert ("Aun no estas en edad jubilatoria")}
+
+if((edad >65) && (edad <130)) {alert ("Te puedes jubilar");
+
 }else{
-    alert("Aun no esta en edad de jubilarse");
+    alert("Fuera de rango");
 }
 
 // Trabajo 2 parte B//
@@ -46,7 +49,3 @@ do{
 
 for (i=1;i<=1000;i+=2) 
    	document.write(i)
-
-
-
-
