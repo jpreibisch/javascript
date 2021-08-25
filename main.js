@@ -15,9 +15,9 @@ let edad= prompt ("Indique su edad");
 let nombre=  prompt ("Indique su nombre");
 
 
-if (edad < 65) {alert ("Aun no estas en edad jubilatoria")}
+if (edad < 65) {alert ("Aun no estas en edad jubilatoria")
 
-if((edad >65) && (edad <130)) {alert ("Te puedes jubilar");
+}else if((edad >65) && (edad <130)) {alert ("Te puedes jubilar");
 
 }else{
     alert("Fuera de rango");
