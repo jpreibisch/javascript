@@ -1,51 +1,47 @@
-//let entrada = prompt ("Ingresa tu nombre");
-//let salida = entrada + "Bienvenido/a";
-//alert (salida);
+// Trabajo 4 Simulador//
 
-var numeroA= parseInt ("10");
+// Variables //
+const suma = (a,b) => a + b;
+const resta = (a,b) => a - b;
+const iva = x => x * 0.21;
+const dividir = (a,b) => a / b;
+const multiplicar = (a,b) => a * b;
 
+let precioProducto = 990;
+let descMayorista = 80;
+let cuotas= 12;
+let renta= 30;
 
-let entrada= prompt ("Ingresa cuantos zapatos tienes");
+let precioMayorista = resta(suma (precioProducto, iva (precioProducto)), descMayorista);
+alert (precioMayorista);
+
+let precioCuotas = dividir (suma(precioProducto, iva (precioProducto)), cuotas);
+alert (precioCuotas);
+
+let costo = resta (precioProducto, renta);
+
+//Salida cuotas//
+
+let entradaCosto= prompt ("Cuantas cuotas quieres?");
+entradaCosto= parseInt (entradaCosto);
+let salidaCosto= (precioProducto) / entradaCosto;
+alert (("Este es el valor de la cuota") + " " + (salidaCosto));
+
+// Salida calculo precio sin IVA// 
+
+let entrada = prompt ("Ingresa el costo");
 entrada= parseInt (entrada);
-let salida= entrada + (numeroA);
-alert (salida);
+let salida= (renta) + entrada; 
+alert (("Este es el precio sin IVA") + " " + (salida));
 
-// Trabajo 2//
-let edad= prompt ("Indique su edad");
-let nombre=  prompt ("Indique su nombre");
+// Precio Final con IVA// 
 
-
-if (edad < 65) {alert ("Aun no estas en edad jubilatoria")
-
-}else if((edad >65) && (edad <130)) {alert ("Te puedes jubilar");
-
-}else{
-    alert("Fuera de rango");
-}
-
-// Trabajo 2 parte B//
-
-let partidos= prompt ("Indique cantidad de partidos jugados");
-let club=  prompt ("Indique su club")
-
-if ((partidos>=15) && (nombre!="River")) {alert ("Ingresada");
-}else{
-    console.log ("Le falta experiencia");
-}
-
-// Trabajo 3 parte A //
-let usuario= "usuario";
-let pass= "pass123";
-let resultado= false;
-
-do{
-    let user=prompt ("Ingrese su usuario");
-    let password= prompt ("Ingrese su contraseña");
-    resultado= ((user==usuario) && (password=pass))
-}while (!resultado)
+let entradacIva = prompt ("Ingresa el precio sin impuestos");
+entradacIva= parseInt (entradacIva);
+let salidacIva = ((entradacIva) + iva (entradacIva));
+alert (("Precio final") + " " + (salidacIva));
 
 
-// Trabajo 3 parte B//
 
-for (i=1;i<=1000;i+=2) 
-   	document.write(i)
+
+
