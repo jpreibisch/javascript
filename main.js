@@ -42,6 +42,28 @@ let salidacIva = ((entradacIva) + iva (entradacIva));
 alert (("Precio final") + " " + (salidacIva));
 
 
+// TP 6: Objetos//
+
+class Mercaderia{
+    constructor () {
+        this.nombre = "Psicologia";
+        this.precio = 3300;
+        this.frecuencia = "regular";
+    }
+    sumaIva() {
+        this.precio= this.precio * 1.21;
+    }
+    hablar () {
+        alert ("Mercaderia" + " " + this.nombre);
+    }
+}
+
+const mercaderia1 = new Mercaderia ("Sesion Psicologia", 1250, "unica");
+const mercaderia2 = new Mercaderia ("Tratamiento Cognitivo Conductual", 8900, "Regular");
+mercaderia1.hablar();
+mercaderia2.sumaIva();
+mercaderia2.hablar();
+
 
 
 
