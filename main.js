@@ -12,15 +12,21 @@ let descMayorista = 80;
 let cuotas= 12;
 let renta= 30;
 
+
 let precioMayorista = resta(suma (precioProducto, iva (precioProducto)), descMayorista);
-alert (precioMayorista);
+console.log (precioMayorista);
 
 let precioCuotas = dividir (suma(precioProducto, iva (precioProducto)), cuotas);
-alert (precioCuotas);
+console.log (precioCuotas);
 
 let costo = resta (precioProducto, renta);
+console.log (costo);
 
 //Salida cuotas//
+
+let entradaBienvenido = prompt ("Que producto quieres?");
+let salidaBienvenido = (entradaBienvenido);
+alert (("Me interesa") + " " + (entradaBienvenido));
 
 let entradaCosto= prompt ("Cuantas cuotas quieres?");
 entradaCosto= parseInt (entradaCosto);
@@ -51,10 +57,11 @@ class Mercaderia{
         this.frecuencia = "regular";
     }
     sumaIva() {
-        this.precio= this.precio * 1.21;
+        return this.precio * 1.21;
     }
+
     hablar () {
-        alert ("Mercaderia" + " " + this.nombre);
+        alert (this.nombre + " " + this.precio);
     }
 }
 
@@ -63,6 +70,21 @@ const mercaderia2 = new Mercaderia ("Tratamiento Cognitivo Conductual", 8900, "R
 mercaderia1.hablar();
 mercaderia2.sumaIva();
 mercaderia2.hablar();
+
+/* Trabajo en clase Json*/
+
+let saludo= "Hola";
+let usuarios= ["Carla", "Yanina", "Ximena", "Josefina"];
+
+localStorage.setItem ("hola", saludo);
+
+let usuariosJson = JSON.stringify (usuarios);
+
+localStorage.setItem ("alumnos", usuariosJson);
+
+localStorage.getItem ("alumnos", usuariosJson);
+
+JSON.parse (localStorage.getItem ("alumnos", usuariosJson));
 
 
 
