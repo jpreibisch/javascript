@@ -1,6 +1,6 @@
 /* TP DOM */
 let titulo = document.getElementsByClassName ("titulo1");
-let formulario = document.getElementsByClassName ("formulario");
+let formulario = document.getElementById ("formulario");
 let opciones = document.getElementsByClassName ("opciones");
 console.log (titulo.innerHTML);
 console.log (formulario.innerHTML);
@@ -22,6 +22,14 @@ if (nombre && edad && problematica){
     cliente.textContent = nombre, edad, problematica;
     let contacto = document.getElementsByClassName ('contacto');
     contacto.appendChild (cliente);
+}
+
+let formulario = document.getElementById ("formulario");
+formulario.addEventListener ("submit", validarformulario);
+
+function validarformulario (e) {
+    e.preventDefault ();
+    console.log ("Formulario Enviado");
 }
 
 
