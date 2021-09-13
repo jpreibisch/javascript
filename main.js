@@ -1,46 +1,58 @@
-
-
-/* Trabajo Integrador*/
-
-
-class Mercaderia{
-    constructor () {
-        this.nombre = "Sesion";
-        this.precio = 1500;
-        this.frecuencia = "regular";
+class Servicio{
+    constructor (nombre, precio, frecuencia) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.frecuencia = frecuencia;
     }
-    sumaIva() {
-        return this.precio * 1.21;
-    }
-
-    hablar () {
-        alert (this.nombre + " " + this.precio);
+    mostrarMensaje() {
+        alert (this.nombre + " tiene un valor de $" + this.precio);
     }
 }
+function crearServicios(nombre, precio, frecuencia){
+    return new Servicio(nombre, precio, frecuencia);
+};
+function main(){
+// base de servicios hardcodeada
+const servicios = [];
+servicios.push(crearServicios("Interconsulta", 1250, "unica"));
+servicios.push(crearServicios("Tratamiento Cognitivo Conductual", 8900, "Regular"));
+servicios.push(crearServicios("Consulta nutricional", 3500, "unica"));
+let carrito = seleccionarServicios(servicios);
+mostrarCarrito(carrito);
+}
+function seleccionarServicios(servicios) {
+    const carrito = [];
+    alert("Seleccione los servicios que desea agregar a su carrito");
+    for(servicio of servicios) {
+        let seleccion = confirm(servicio.nombre + " tiene un costo de $" + servicio.precio + " y una frecuencia " + servicio.frecuencia + "\n ¿Desea agregarlo al carrito?");
+        if (seleccion) {
+            carrito.push(servicio);
+        }
+    }
+    return carrito;
+}
+function mostrarCarrito(carrito) {
+    let seleccionados = " - ";
+    for(servicio of carrito){
+        seleccionados += servicio.nombre + " - ";
+    };
+    alert("Los servicios seleccionados son: \n" + seleccionados);
+};
 
-const mercaderia1 = new Mercaderia ("Interconsulta", 1250, "unica");
-const mercaderia2 = new Mercaderia ("Tratamiento Cognitivo Conductual", 8900, "Regular");
-const mercaderia3 = new Mercaderia ("Consulta nutricional", 3500, "unica");
-
-mercaderia1.hablar();
-mercaderia1.sumaIva();
-mercaderia2.sumaIva();
-mercaderia2.hablar();
-mercaderia3.hablar();
-mercaderia3.sumaIva();
-
-const productos = [mercaderia, mercaderia1, mercaderia2, mercaderia3];
-console.log (productos.length);
-
-let entrada= prompt ("Que servicio quieres contratar?")
-productos.forEach(item => console.log(item))
-    alert (productos.hablar());
+//preguntar qué servicio -- filtrar búsqueda --> 
+//mostrar características
+//pedir confirmación de agregar
+/* const servicios = [];
+let continuar = false;
+do {
+    let nombreServ = prompt("");
+    let precioServ = prompt("");
+    let frecuenciaServ = prompt("");
+    servicios.push(crearServicios(nombreServ, precioServ, frecuenciaServ));
+    continuar = confirm("¿Desea salir?")
+} while(continuar); */
 
 
-//let entrada = prompt ("Que servicio quieres?");
-//productos.find (entrada => entrada =mercaderia1,mercaderia2, mercaderia3());
-//console.log (productos.length);
-//}while (productos.length != cantidad);
-//alert (mercaderia1.hablar(), mercaderia2.hablar(), mercaderia3.hablar());
-//alert (productos.hablar());
+
+
 
