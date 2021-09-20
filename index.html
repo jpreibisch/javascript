@@ -4,27 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Accesorios para dormir | Balanze Salud Digital</title>
+    <meta name="keywords" content="accesorios, dormir, cama, cuarto, habitación, sueño, pijama, mesa de luz, reloj, despertador, tienda.">
+    <meta name="description" content= "Descubre nuestros accesorios para un mejor descanso.">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="styles/estilos.css">
 </head>
+
 <body>
-    <main>
-        <h1 class="titulo1">Bienvenido al cotizador en linea</h1>
-        <form id="formulario" action="">
-            <label  for="get-producto">Que producto quieres?</label>
-            <select name="Producto">
-                <option class="opciones">Sesion Psicologia</option>
-                <option class="opciones">Tratamiento Cognitivo Conductual</option>
-            </select>
-            <input type="submit" value="Enviar">
-        </form>
-            <h2>Dejanos tus datos para contactarte</h2>
-                <ul class="contacto">
-                    <li>Nombre Completo</li>
-                    <li>Edad</li>
-                    <li>Problematica</li>
+    <header>
+        <div>
+            <img class="menu__logo" src="imagenes/logo.png" alt="logo" id="logo">
+            <img class="background-header">
+        </div>
+        <nav>
+            <label for="menu-dropdown" class="menu menu__sm">
+                <span class="iconify" data-icon="heroicons-solid:menu" data-inline="false"></span>
+            </label>
+                <input type="checkbox" id="menu-dropdown" hidden>
+    
+            <ul class="menu menu__md">
+                <li><a class="menu__enlace" href="index.html">Home</a></li>
+                <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+                <li id="divCarrito"><a class="menu__enlace" href="carrito.html">
+                    <span class="iconify" data-icon="mdi-light:cart"></span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="fondo-tienda">
+        <h1 id= "tiendaJs" class="titulo-tienda"></h1>
+        <div class="container-tienda">
+            <div id="tarjeta" class="card-tienda">
+                <div class="card-tienda__img" id="tienda1"></div>
+                <div class="card-tienda__content">
+                    <ul class="card-tienda__list">
+                        <li id="tituloTarjeta" class="card-tienda__item">Sesion de Psicologia</li>
+                    </ul>
+                    <p class="card-tienda__desc">Sesion individual de Psicologia.</p>
+                        <a id="botonSesion" class= "card-tienda__btn" href="">Comprar</a>
+                </div>
+            </div>
+            <div class="card-tienda">
+                <div class="card-tienda__img" id="tienda2"></div>
+                <div class="card-tienda__content">
+                    <ul class="card-tienda__list">
+                        <li class="card-tienda__item">Tratamiento Cognitivo Conductual</li>
+                    </ul>
+                <p class="card-tienda__desc">Tratamiento para el insomnio</p>
+                    <a id="botonTrat" class= "card-tienda__btn">Comprar</a>
+            </div>
+        </div>
+        <div class="card-tienda">
+            <div class="card-tienda__img" id="tienda3"></div>
+            <div class="card-tienda__content">
+                <ul class="card-tienda__list">
+                    <li class="card-tienda__item">Interconsulta Medica</li>
                 </ul>
+                <p class="card-tienda__desc">Consulta con nuestros medicos especialistas.</p>
+                <a id="botonInter" class= "card-tienda__btn" href="">Comprar</a>
+            </div>
+            </div>
+        </div>
     </main>
-    <script src="main.js"></script>  
+    <footer>
+        <div class="container">
+            <div>
+                <ul class="container__mapa">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="container-redes">
+                    <li><a href="#">
+                            <span class="iconify" data-icon="ls:instagram" data-inline="false"></span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <span class="iconify" data-icon="jam:facebook-square" data-inline="false"></span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <span class="iconify" data-icon="gg:twitter" data-inline="false"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<script src= "index.js"></script>
 </body>
 </html>

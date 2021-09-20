@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos | Balanze Salud Digital</title>
+    <meta name="clínica del sueño, contacto, contactanos, nuestro equipo, profesionales del sueño, neurología">
+    <meta name="description" content="Contactanos y entérate de las ultimas novedades de nuestra clínica online.">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="styles/estilos.css">
+</head>
+
+<body>
+
+<!--Header-->
+
+<header>
+    <div class="menu__logo">
+        <img src="imagenes/logo.png" alt="logo" id="logo">
+    </div>
+    <nav>
+        <label for="menu-dropdown" class="menu menu__sm">
+            <span class="iconify" data-icon="heroicons-solid:menu" data-inline="false"></span>
+        </label>
+            <input type="checkbox" id="menu-dropdown" hidden>
+
+        <ul class="menu menu__md">
+            <li><a class="menu__enlace" href="index.html">Home</a></li>
+            <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>    
+        </ul>
+    </nav>
+</header>
+
+
+    <!--Main-->
+
+    <main>
+        <section class="back-contacto">
+            <h1 class="titulo-contacto">Contacto</h1>
+            <form action="" class="form__formulario-general">
+                    <div class="form__modelo-etiqueta">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form__modelo-etiqueta">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+
+                    <div class="form__modelo-etiqueta">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form__modelo-etiqueta">
+                        <label for="motivo">Motivo del contacto:</label>
+                        <select name="motivo" id="motivo">
+                            <option value="" selected disabled>Elige un motivo</option>
+                            <option value="Ped">Pedido</option>
+                            <option value="Con">Consulta</option>
+                            <option value="Rec">Reclamo</option>
+                        </select>
+                    </div>
+
+                    <div class="form__modelo-etiqueta" >
+                        <label for="mensaje">Deje sus comentarios:</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="3" required
+                            style="resize: none;"></textarea>
+                    </div>
+
+                    <div class="form__modelo-etiqueta">
+                        <label for="newsletter" class="colorContacto">Acepto recibir el newsletter de Balanze Salud Digital
+                            <input type="checkbox" name="newsletter" id="newsletter" value="newsletter">
+                        </label>   
+                    </div>
+
+                    <button class="botonc" type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div>
+                <ul class="container__mapa">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="container-redes">
+                    <li><a href="#">
+                            <span class="iconify" data-icon="ls:instagram" data-inline="false"></span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <span class="iconify" data-icon="jam:facebook-square" data-inline="false"></span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <span class="iconify" data-icon="gg:twitter" data-inline="false"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

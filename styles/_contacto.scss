@@ -1,0 +1,75 @@
+
+.form__formulario-general {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 28.125rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    padding:1.5em;
+    background: grey; 
+}
+
+.form__modelo-etiqueta{
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.2em;
+    align-items: center;
+    width: 100%;
+}
+
+input, select, option, textarea{
+    padding:0.7em;
+    border: none;
+    resize:none;
+    border-radius: 0.3em;
+    width: inherit;
+    background-color: #dad4d4;
+}
+
+textarea{
+    min-height: 7.5rem;
+}
+
+form.formulario-general {
+   
+    font-size: 1.5625rem;
+    margin: 1em;
+}
+
+form.formulario-general input, form.formulario-general select, form.formulario-general textarea{
+    margin-bottom: 1em;
+}
+
+.titulo-contacto{
+    font-size: 3em;
+    color:white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.botonc{
+    background: rgb(230, 106, 5);
+    color: white;
+    text-decoration: none;
+    padding: .5em 1em;
+    border-radius: .5em;
+    display:inline-block;
+    align-items: center;
+    margin-top:.5em;
+    margin-left: 2em;
+    max-width: 6.25rem;
+        &:hover {
+            background: rgb(235, 202, 14);
+        }
+}
+.back-contacto{
+    background: url("/imagenes/back15.jpg");
+}

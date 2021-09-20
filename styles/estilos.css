@@ -1,0 +1,348 @@
+.titulo-tienda {
+  color: white;
+  font-size: 3em;
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fondo-tienda {
+  background: url("../imagenes/back16.jpg") no-repeat center/cover;
+}
+
+.container-tienda {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
+  margin: 1em;
+}
+
+.card-tienda {
+  display: flex;
+  flex-flow: column;
+  border-radius: 0.3em;
+  overflow: hidden;
+  margin-bottom: 10em;
+  box-shadow: 0 10px 25px -10px black;
+  transition: 300ms ease-in-out;
+}
+
+.card-tienda__img {
+  width: 100%;
+  flex-basis: 25em;
+  background: white;
+}
+
+.card-tienda__content {
+  padding: 1.5em;
+  background: #c5c2c2;
+  align-items: center;
+  text-align: center;
+}
+
+.card-tienda__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.card-tienda__item {
+  background: #159b94;
+  color: #010c0b;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  border-radius: .3em;
+  font-size: 1.2em;
+}
+
+.card-tienda__item--active {
+  background: #4b4d4b;
+  font-weight: bold;
+}
+
+.card-tienda__desc {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  flex: 1;
+  padding: 1.5em;
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+}
+
+.card-tienda__btn {
+  background: #bb510a;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  border-radius: .5em;
+  display: inline-block;
+  margin-bottom: 0.625em;
+}
+
+.card-tienda__btn:hover {
+  background: #e9c913;
+}
+
+.card-tienda:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px -10px black;
+}
+
+#tienda1 {
+  background: url("../imagenes/sesion.jpg") no-repeat 50% 70%/cover;
+}
+
+#tienda2 {
+  background: url("../imagenes/tratamiento.jpg") no-repeat 50% 70%/cover;
+}
+
+#tienda3 {
+  background: url("../imagenes/interconsulta.jpg") no-repeat 50% 70%/cover;
+}
+
+.form__formulario-general {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 28.125rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5em;
+  background: grey;
+}
+
+.form__modelo-etiqueta {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.2em;
+  align-items: center;
+  width: 100%;
+}
+
+input, select, option, textarea {
+  padding: 0.7em;
+  border: none;
+  resize: none;
+  border-radius: 0.3em;
+  width: inherit;
+  background-color: #dad4d4;
+}
+
+textarea {
+  min-height: 7.5rem;
+}
+
+form.formulario-general {
+  font-size: 1.5625rem;
+  margin: 1em;
+}
+
+form.formulario-general input, form.formulario-general select, form.formulario-general textarea {
+  margin-bottom: 1em;
+}
+
+.titulo-contacto {
+  font-size: 3em;
+  color: white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.botonc {
+  background: #e66a05;
+  color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  border-radius: .5em;
+  display: inline-block;
+  align-items: center;
+  margin-top: .5em;
+  margin-left: 2em;
+  max-width: 6.25rem;
+}
+
+.botonc:hover {
+  background: #ebca0e;
+}
+
+.back-contacto {
+  background: url("/imagenes/back15.jpg");
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.menu__logo {
+  margin: 0.5em;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/*Header*/
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20px 0 black;
+  padding: 1.1em;
+}
+
+.menu__logo {
+  align-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  align-items: flex-end;
+  font-size: 1.2em;
+  font-weight: bolder;
+  background-color: rgba(1, 1, 1, 0.3);
+  gap: .7em;
+  list-style-type: none;
+  padding: 0.625em;
+}
+
+.menu__enlace {
+  padding: .7em;
+  text-decoration: none;
+  color: #080700;
+}
+
+.menu__enlace:hover {
+  transform: 2px;
+  color: whitesmoke;
+  transition: 2s;
+}
+
+.menu__sm {
+  display: none;
+  font-size: 1.3em;
+}
+
+.menu__md {
+  display: flex;
+  gap: 1em;
+}
+
+.menu__md li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .menu__sm {
+    display: block;
+  }
+  .menu__md {
+    display: none;
+  }
+  input[type=checkbox]:checked ~ .menu__md {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: calc(80vh - 40px);
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    gap: 1.5em;
+    background: #525455;
+    padding: 2em;
+    margin-left: 16em;
+    border-bottom-left-radius: 0.5em;
+    animation: scale-in-ver-top 300ms both;
+    font-size: 0.8em;
+  }
+  @keyframes scale-in-ver-top {
+    0% {
+      transform: scaleY(0);
+      transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      transform-origin: top;
+      opacity: 1;
+    }
+  }
+}
+
+/*Footer*/
+.container {
+  margin-top: 0.8em;
+  min-height: 7em;
+  background-color: #525455;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3em;
+  color: black;
+  list-style-type: none;
+}
+
+.container__redes ul, .container li, .container a {
+  font-weight: bolder;
+  text-decoration: none;
+  margin-right: .2em;
+  color: black;
+  font-size: 1.2em;
+  gap: .5em;
+  display: inline;
+}
+
+.container__mapa {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  padding-left: 1em;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.container__enlace {
+  display: inline;
+  list-style-type: none;
+  color: black;
+  font-size: 1.5em;
+  gap: .5em;
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 0.5em;
+  }
+  .container__mapa {
+    font-size: 0.5em;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
