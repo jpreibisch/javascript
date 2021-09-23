@@ -1,6 +1,8 @@
-  
+/* Objeto de Servicios*/  
+
 class Servicio{
     constructor (nombre, precio, frecuencia) {
+        this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.frecuencia = frecuencia;
@@ -10,22 +12,25 @@ class Servicio{
     }
 }
 
-function crearServicios(nombre, precio, frecuencia){
-    return new Servicio(nombre, precio, frecuencia);
+function crearServicios(id, nombre, precio, frecuencia){
+    return new Servicio(id, nombre, precio, frecuencia);
 };
 function main(){
 // base de servicios hardcodeada
 const servicios = [];
-servicios.push(crearServicios("Interconsulta", 1250, "unica"));
-servicios.push(crearServicios("Tratamiento Cognitivo Conductual", 8900, "Regular"));
-servicios.push(crearServicios("Sesion Psicologia", 3500, "unica"));
+servicios.push(crearServicios(1,"Interconsulta", 1250, "unica"));
+servicios.push(crearServicios(2,"Tratamiento Cognitivo Conductual", 8900, "Regular"));
+servicios.push(crearServicios(3,"Sesion Psicologia", 3500, "unica"));
 
 let carrito = seleccionarServicios(servicios);
-mostrarCarrito(carrito);
+mostrarCarrito(servicios);
 }
+
+/* Array de servicios*/ 
+
 function seleccionarServicios(servicios) {
     const carrito = [];
-    console.log ("Seleccione los servicios que desea agregar a su carrito");
+    alert ("Seleccione los servicios que desea agregar a su carrito");
     for(servicio of servicios) {
         let seleccion = confirm (servicio.nombre + " tiene un costo de $" + servicio.precio + " y una frecuencia " + servicio.frecuencia + "\n ¿Desea agregarlo al carrito?");
         if (seleccion) {
@@ -34,6 +39,7 @@ function seleccionarServicios(servicios) {
     }
     return carrito;
 }
+
 
 let carrito = getElementById ("carrito")
 let alCarro = document.createElement ("div")
@@ -49,33 +55,34 @@ function mostrarCarrito(divCarrito) {
     alert("Los servicios seleccionados son: \n" + seleccionados);
 };
 
+
 var tiendaVariable = document.getElementById ("tiendaJs");
 console.log (tiendaVariable);
 tiendaVariable.innerHTML = "Nuestra Tienda";
 tiendaVariable.style.color = "black";
 
+/* Boton evento al carrito*/ 
+$(document).ready(() => {
+    
+function botonCompra(servicios) {
+    const carrito = [];
+    for(servicio of servicios) {
+        $("#card").appendChild( 
+                                <div>
+                                <button class="boton">Comprar</button>
+                                </div>
 
-var botonInter = document.getElementById ("botonInter");
-console.log (botonInter);
+        )
 
-botonInter.addEventListener ("click",function(seleccionarServicios){
-    console.log ("Comprado");
-})
+    $('.boton$(servicio.id)!').on('click', function(){
+        alert ("Compraste $(this.nombre)")
+    })
+}
 
-var botonSesion = document.getElementById ("botonSesion");
-console.log (botonSesion);
+    $("h1").fadeOut("slow", function());
 
-botonSesion.addEventListener ("click",function(seleccionarServicios){
-    console.log ("Comprado");
-})
 
-var botonTrat = document.getElementById ("botonTrat");
-console.log (botonTrat);
-
-botonTrat.addEventListener ("click",function(seleccionarServicios){
-    console.log ("Comprado");
-})
-
+var boton = document.event.target.id (boton)
 
 const divCarrito = document.getElementById ("divCarrito");
 console.log (divCarrito);
