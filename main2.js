@@ -66,7 +66,7 @@ function guardarLocalStorage(){
     let password = "pass";
     let login = false;
     
-    const carrito []
+    const carrito = []
   
     
     localStorage.setItem ("userName", JSON.stringify(userName));
